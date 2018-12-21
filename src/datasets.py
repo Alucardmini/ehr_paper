@@ -23,7 +23,7 @@ def get_sample_datesets(data_path, task, sample_nums=1000, is_sampls=False):
     if is_sampls and sample_nums > 0:
         total = sample_nums
     # 取出每一份样本
-    for i in total:
+    for i in range(total):
         every_bingli = train_data[i]
         count = 0
         if task == 'mortality':
