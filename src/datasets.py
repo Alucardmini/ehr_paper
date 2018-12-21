@@ -73,20 +73,52 @@ class Datesets(object):
         self.write_list_2_file(train_y, dst_path+'_y.pkl')
         self.write_list_2_file(sample_map, dst_path+'_map.pkl')
 
+    def load_data(self, task='in_hospital'):
+        """
+
+        :param task:根据任务加载数据  task in ['mortality', 'readmission', 'in_hospital']
+        :return:
+        """
+        with open('../data/'+task+'_x.pkl', 'rb')as f:
+            train_x = pickle.load(f)
+        with open('../data/'+task+'_y.pkl', 'rb')as f:
+            train_y = pickle.load(f)
+        with open('../data/'+task+'_map.pkl', 'rb')as f:
+            train_map = pickle.load(f)
+        train_data = []
+        base = 0
+
+        for k, v in train_map.items():
+            if base + train_map[k] <= len(train_x):
+                train_data.append(train_x[base: base+train_map[k]])
+                base += train_map[k]
+
+        return (train_data, train_y)
+
 if __name__ == "__main__":
 
     data_app = Datesets()
-    tasks = ['mortality', 'readmission', 'in_hospital']
-    data_path = "/home/jq/PaperRealization/data"
-    for task in tasks:
-        texts, labels, sample_map = data_app.get_sample_datesets(data_path=data_path, task=task, sample_nums=1000, is_sampls=True)
-        data_app.save_train_data(texts, labels, sample_map, '../data/'+task)
+    # tasks = ['mortality', 'readmission', 'in_hospital']
+    # data_path = "/home/jq/PaperRealization/data"
+    # for task in tasks:
+    #     texts, labels, sample_map = data_app.get_sample_datesets(data_path=data_path, task=task, sample_nums=1000, is_sampls=True)
+    #     data_app.save_train_data(texts, labels, sample_map, '../data/'+task)
 
     # data_app = Datesets()
     # src_list = ['1', '2', '3']
     # data_app.write_list_2_file(src_list, '../data/demo.pkl')
 
     # with open('../data/in_hospital_x.pkl', 'rb')as f:
-    #     test_list = pickle.load(f)
-    #     print(len(test_list))
+    #     train_x = pickle.load(f)
+    #     print(len(train_x))
+    #
+    # with open('../data/in_hospital_y.pkl', 'rb')as f:
+    #     train_y = pickle.load(f)
+    #
+    # with open('../data/in_hospital_map.pkl', 'rb')as f:
+    #     train_map = pickle.load(f)
+    # print(len(train_map))
+    data_app.load_data('in_hospital')
+
+
 
