@@ -83,7 +83,7 @@ test_y = np_utils.to_categorical(test_y, nb_class)
 print(train_x[0].shape)
 
 model = Sequential()
-model.add(Embedding(len(word_indices), output_dim=max_length, name='embedding'))
+model.add(Embedding(len(word_indices), output_dim=64, name='embedding'))
 model.add(LSTM(512))
 model.add(Dense(512))
 model.add(Dense(nb_class, activation='softmax'))
@@ -92,5 +92,5 @@ model.compile(loss='categorical_crossentropy',
               optimizer='adam',
               metrics=['accuracy'])
 
-model.fit(train_x, train_y, batch_size=batch_size)
+model.fit(train_x, train_y, batch_size=batch_size, epochs=40)
 model.save('in_hospital.h5')
