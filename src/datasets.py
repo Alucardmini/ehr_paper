@@ -68,10 +68,10 @@ class Datesets(object):
         with open(filepath, 'wb') as f:
             pickle.dump(src_list, f)
 
-
-    def save_train_data(self, train_x, train_y, dst_path):
+    def save_train_data(self, train_x, train_y, sample_map, dst_path):
         self.write_list_2_file(train_x, dst_path+'_x.pkl')
         self.write_list_2_file(train_y, dst_path+'_y.pkl')
+        self.write_list_2_file(sample_map, dst_path+'_map.pkl')
 
 if __name__ == "__main__":
 
@@ -79,14 +79,14 @@ if __name__ == "__main__":
     tasks = ['mortality', 'readmission', 'in_hospital']
     data_path = "/home/jq/PaperRealization/data"
     for task in tasks:
-        texts, labels, sample_count = data_app.get_sample_datesets(data_path=data_path, task=task, sample_nums=1000, is_sampls=True)
-        data_app.save_train_data(texts, labels, '../data/'+task)
+        texts, labels, sample_map = data_app.get_sample_datesets(data_path=data_path, task=task, sample_nums=1000, is_sampls=True)
+        data_app.save_train_data(texts, labels, sample_map, '../data/'+task)
 
     # data_app = Datesets()
     # src_list = ['1', '2', '3']
     # data_app.write_list_2_file(src_list, '../data/demo.pkl')
 
-    # with open('../data/demo.pkl', 'rb')as f:
+    # with open('../data/in_hospital_x.pkl', 'rb')as f:
     #     test_list = pickle.load(f)
-    #     print(test_list)
+    #     print(len(test_list))
 
