@@ -66,7 +66,7 @@ class Datesets(object):
 
     def write_list_2_file(self, src_list, filepath):
         with open(filepath, 'w+') as f:
-            pickle.dump(src_list, filepath)
+            pickle.dump(src_list, f)
             # lists = [str(line) + "\n" for line in src_list]
             # f.writelines(lists)
 
