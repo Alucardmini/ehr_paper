@@ -93,4 +93,4 @@ model.compile(loss='categorical_crossentropy',
               metrics=['accuracy'])
 
 model.fit(train_x, train_y, batch_size=batch_size)
-
+model.save('in_hospital.h5')
