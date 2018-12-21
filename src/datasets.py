@@ -65,14 +65,13 @@ class Datesets(object):
         return new_train_data, new_y_label, sample_count
 
     def write_list_2_file(self, src_list, filepath):
-        with open(filepath, 'w+') as f:
+        with open(filepath, 'wb') as f:
             pickle.dump(src_list, f)
-            # lists = [str(line) + "\n" for line in src_list]
-            # f.writelines(lists)
+
 
     def save_train_data(self, train_x, train_y, dst_path):
-        self.write_list_2_file(train_x, dst_path+'_x.txt')
-        self.write_list_2_file(train_y, dst_path+'_y.txt')
+        self.write_list_2_file(train_x, dst_path+'_x.pkl')
+        self.write_list_2_file(train_y, dst_path+'_y.pkl')
 
 if __name__ == "__main__":
 
@@ -83,9 +82,11 @@ if __name__ == "__main__":
         texts, labels, sample_count = data_app.get_sample_datesets(data_path=data_path, task=task, sample_nums=1000, is_sampls=True)
         data_app.save_train_data(texts, labels, '../data/'+task)
 
-    # src_str = open('../data/in_hospital_x.txt', 'r').read()
-    # content = str(src_str)
-    # print(content[len(content)-10:])
-    # # test_json = json.load(content)
+    # data_app = Datesets()
+    # src_list = ['1', '2', '3']
+    # data_app.write_list_2_file(src_list, '../data/demo.pkl')
 
+    # with open('../data/demo.pkl', 'rb')as f:
+    #     test_list = pickle.load(f)
+    #     print(test_list)
 
