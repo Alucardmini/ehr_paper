@@ -90,7 +90,8 @@ class Datesets(object):
 
         for k, v in train_map.items():
             if base + train_map[k] <= len(train_x):
-                train_data.append(train_x[base: base+train_map[k]])
+                train_data.append(' '.join(train_x[base: base+train_map[k]]))
+                # train_data.append(train_x[base: base+train_map[k]])
                 base += train_map[k]
 
         return (train_data, train_y)

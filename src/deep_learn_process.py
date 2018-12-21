@@ -37,8 +37,14 @@ test_y = labels[train_size:]
 
 w2id_path = '../data/word2id.pkl'
 
-max_length = max([len(doc.split(' ')) for usr in train_x for doc in usr])
-max_steps = max([len(_) for _ in train_x])   #　文书最多个数
+# without flatten
+# max_length = max([len(doc.split(' ')) for usr in train_x for doc in usr])
+# max_steps = max([len(_) for _ in train_x])   #　文书最多个数
+
+
+max_length = max([len(usr.split(' ')) for usr in train_x])
+# max_steps = max([len(_) for _ in train_x])   #　文书最多个数
+
 
 if not os.path.exists(w2id_path):
     words = set()
@@ -57,10 +63,15 @@ def vector_sentence(sentence, wordIndices):
     res = [word_indices[v] for v in sent_list if v in wordIndices]
     return res
 
-train_x = [[vector_sentence(doc, word_indices) for doc in usr] for usr in train_x]
-test_x = [[vector_sentence(doc, word_indices) for doc in usr] for usr in test_x]
-train_x = [sequence.pad_sequences(_, max_length) for _ in train_x]
-test_x = [sequence.pad_sequences(_, max_length) for _ in test_x]
+# train_x = [[vector_sentence(doc, word_indices) for doc in usr] for usr in train_x]
+# test_x = [[vector_sentence(doc, word_indices) for doc in usr] for usr in test_x]
+# train_x = [sequence.pad_sequences(_, max_length) for _ in train_x]
+# test_x = [sequence.pad_sequences(_, max_length) for _ in test_x]
+
+train_x = [vector_sentence(doc, word_indices) for doc in train_x]
+test_x = [vector_sentence(doc, word_indices) for doc in test_x]
+train_x = sequence.pad_sequences(train_x, max_length)
+test_x = sequence.pad_sequences(test_x, max_length)
 
 test_x = np.array(test_x)
 test_y = np.array(test_y)
@@ -68,6 +79,8 @@ train_x = np.array(train_x)
 train_y = np.array(train_y)
 train_y = np_utils.to_categorical(train_y, nb_class)
 test_y = np_utils.to_categorical(test_y, nb_class)
+
+print(train_x[0].shape)
 
 model = Sequential()
 model.add(Embedding(len(word_indices), output_dim=max_length, name='embedding'))
