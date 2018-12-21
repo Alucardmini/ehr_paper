@@ -34,6 +34,11 @@ session = tf.Session(config=config)
 
 KTF.set_session(session)
 
+# os.environ["CUDA_DEVICE_ORDER"]="PCI_BUS_ID"
+# os.environ["CUDA_VISIBLE_DEVICES"]="0"
+# config = tf.ConfigProto
+# config.gpu_options.per_process_gpu_memory_fraction = 0.5
+
 
 (raw_datas, labels) = Datesets.load_data("in_hospital")
 
