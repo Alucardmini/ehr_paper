@@ -22,7 +22,14 @@ from keras.layers import Embedding, Dense, LSTM
 from keras.preprocessing import sequence
 from keras.models import Model, Sequential
 import numpy as np
+import keras.backend as K
 from keras.utils import np_utils
+import tensorflow as tf
+
+os.environ["CUDA_DEVICE_ORDER"]="PCI_BUS_ID"
+os.environ["CUDA_VISIBLE_DEVICES"]="0"
+config = tf.ConfigProto
+config.gpu_options.per_process_gpu_memory_fraction = 0.5
 
 (raw_datas, labels) = Datesets.load_data("in_hospital")
 
