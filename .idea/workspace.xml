@@ -29,11 +29,21 @@
       <file leaf-file-name="deep_learn_process.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/deep_learn_process.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="30" column="23" lean-forward="false" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
+            <state relative-caret-position="252">
+              <caret line="28" column="10" lean-forward="true" selection-start-line="28" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
               <folding>
                 <element signature="e#149#158#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config_pb2.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/JH_App/opt/Python-3.6.2/lib/python3.6/site-packages/tensorflow/core/protobuf/config_pb2.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="507" column="61" lean-forward="false" selection-start-line="507" selection-start-column="61" selection-end-line="507" selection-end-column="61" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -94,6 +104,8 @@
       <find>,</find>
       <find>平均血红蛋白浓度_lab_result_value_4</find>
       <find>sample_nums</find>
+      <find>gpu</find>
+      <find>gpu_options</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -108,8 +120,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="621" />
-    <option name="y" value="88" />
+    <option name="x" value="683" />
+    <option name="y" value="74" />
     <option name="width" value="1301" />
     <option name="height" value="744" />
   </component>
@@ -327,7 +339,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="621" y="88" width="1301" height="744" extended-state="0" />
+    <frame x="683" y="74" width="1301" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22716442" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -367,7 +379,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/src/deep_learn_process.py</url>
-          <line>72</line>
+          <line>74</line>
           <option name="timeStamp" value="28" />
         </line-breakpoint>
       </breakpoints>
@@ -547,10 +559,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/JH_App/opt/Python-3.6.2/lib/python3.6/site-packages/tensorflow/core/protobuf/config_pb2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="507" column="61" lean-forward="false" selection-start-line="507" selection-start-column="61" selection-end-line="507" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/deep_learn_process.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="30" column="23" lean-forward="false" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
+        <state relative-caret-position="252">
+          <caret line="28" column="10" lean-forward="true" selection-start-line="28" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
           <folding>
             <element signature="e#149#158#0" expanded="true" />
           </folding>
