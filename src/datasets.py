@@ -2,7 +2,7 @@
 #coding:utf-8
 
 import json
-
+import pickle
 
 class Datesets(object):
 
@@ -66,8 +66,9 @@ class Datesets(object):
 
     def write_list_2_file(self, src_list, filepath):
         with open(filepath, 'w+') as f:
-            lists = [str(line) + "\n" for line in src_list]
-            f.writelines(lists)
+            pickle.dump(src_list, filepath)
+            # lists = [str(line) + "\n" for line in src_list]
+            # f.writelines(lists)
 
     def save_train_data(self, train_x, train_y, dst_path):
         self.write_list_2_file(train_x, dst_path+'_x.txt')
