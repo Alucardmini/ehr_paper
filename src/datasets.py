@@ -66,7 +66,7 @@ class Datesets(object):
 
     def write_list_2_file(self, src_list, filepath):
         with open(filepath, 'w+') as f:
-            lists = [line + "\n" for line in src_list]
+            lists = [str(line) + "\n" for line in src_list]
             f.writelines(lists)
 
     def save_train_data(self, train_x, train_y, dst_path):
