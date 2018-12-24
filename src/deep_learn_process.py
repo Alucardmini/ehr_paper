@@ -91,9 +91,7 @@ model.add(LSTM(279))
 model.add(Dense(20))
 model.add(Dense(1, activation='linear'))
 
-
-sgd = optimizers.SGD(lr=0.01, clipnorm=11.16)
-
+sgd = optimizers.SGD(lr=0.1, decay=1e-6, clipnorm=11.16,momentum=0.9, nesterov=True)
 
 model.compile(loss='mean_squared_error',
               optimizer=sgd,

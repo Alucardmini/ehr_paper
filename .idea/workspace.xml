@@ -29,11 +29,21 @@
       <file leaf-file-name="deep_learn_process.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/deep_learn_process.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="49" column="30" lean-forward="false" selection-start-line="49" selection-start-column="30" selection-end-line="49" selection-end-column="30" />
+            <state relative-caret-position="329">
+              <caret line="93" column="0" lean-forward="false" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
               <folding>
                 <element signature="e#149#158#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="optimizers.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/JH_App/opt/Python-3.6.2/lib/python3.6/site-packages/keras/optimizers.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -136,8 +146,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="543" />
-    <option name="y" value="48" />
+    <option name="x" value="191" />
+    <option name="y" value="60" />
     <option name="width" value="1301" />
     <option name="height" value="744" />
   </component>
@@ -347,7 +357,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="543" y="48" width="1301" height="744" extended-state="0" />
+    <frame x="191" y="60" width="1301" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2366958" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -394,14 +404,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/JH_App/opt/Python-3.6.2/lib/python3.6/site-packages/keras/utils/np_utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="8" column="4" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/JH_App/opt/Python-3.6.2/lib/python3.6/site-packages/keras/preprocessing/sequence.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -802,10 +804,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/JH_App/opt/Python-3.6.2/lib/python3.6/site-packages/keras/optimizers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/deep_learn_process.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="49" column="30" lean-forward="false" selection-start-line="49" selection-start-column="30" selection-end-line="49" selection-end-column="30" />
+        <state relative-caret-position="329">
+          <caret line="93" column="0" lean-forward="false" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
           <folding>
             <element signature="e#149#158#0" expanded="true" />
           </folding>
