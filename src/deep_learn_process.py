@@ -99,8 +99,8 @@ test_x = np.array(test_x)
 test_y = np.array(test_y)
 train_x = np.array(train_x)
 train_y = np.array(train_y)
-train_y = np_utils.to_categorical(train_y, nb_class)
-test_y = np_utils.to_categorical(test_y, nb_class)
+# train_y = np_utils.to_categorical(train_y, nb_class)
+# test_y = np_utils.to_categorical(test_y, nb_class)
 
 print(train_x[0].shape)
 
