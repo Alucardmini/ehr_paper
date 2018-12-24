@@ -45,7 +45,8 @@ KTF.set_session(session)
 raw_datas = [list(set(data.split(' '))) for data in raw_datas]
 
 nb_class = max(labels) + 1
-batch_size = 4
+batch_size = 32
+epochs = 50
 
 train_size = int(len(labels) * 0.8)
 train_x = raw_datas[:train_size]
@@ -113,5 +114,5 @@ model.compile(loss='categorical_crossentropy',
               optimizer='adam',
               metrics=['accuracy'])
 
-model.fit(train_x, train_y, batch_size=batch_size, epochs=100, validation_data=(test_x, test_y))
+model.fit(train_x, train_y, batch_size=batch_size, epochs=epochs, validation_data=(test_x, test_y))
 model.save('in_hospital.h5')
