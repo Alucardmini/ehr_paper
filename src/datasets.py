@@ -91,23 +91,17 @@ class Datesets(object):
         for k, v in train_map.items():
             if base + train_map[k] <= len(train_x):
                 train_data.append(' '.join(train_x[base: base+train_map[k]]))
-                # train_data.append(train_x[base: base+train_map[k]])
                 base += train_map[k]
-
         return (train_data, train_y)
 
 if __name__ == "__main__":
 
     data_app = Datesets()
-    # tasks = ['mortality', 'readmission', 'in_hospital']
-    # data_path = "/home/jq/PaperRealization/data"
-    # for task in tasks:
-    #     texts, labels, sample_map = data_app.get_sample_datesets(data_path=data_path, task=task, sample_nums=1000, is_sampls=True)
-    #     data_app.save_train_data(texts, labels, sample_map, '../data/'+task)
-
-    # data_app = Datesets()
-    # src_list = ['1', '2', '3']
-    # data_app.write_list_2_file(src_list, '../data/demo.pkl')
+    tasks = ['mortality', 'readmission', 'in_hospital']
+    data_path = "/home/jq/PaperRealization/data"
+    for task in tasks:
+        texts, labels, sample_map = data_app.get_sample_datesets(data_path=data_path, task=task, sample_nums=1000, is_sampls=True)
+        data_app.save_train_data(texts, labels, sample_map, '../data/'+task)
 
     # with open('../data/in_hospital_x.pkl', 'rb')as f:
     #     train_x = pickle.load(f)
@@ -119,7 +113,7 @@ if __name__ == "__main__":
     # with open('../data/in_hospital_map.pkl', 'rb')as f:
     #     train_map = pickle.load(f)
     # print(len(train_map))
-    data_app.load_data('in_hospital')
+    # data_app.load_data('in_hospital')
 
 
 

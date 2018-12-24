@@ -42,6 +42,8 @@ KTF.set_session(session)
 
 (raw_datas, labels) = Datesets.load_data("in_hospital")
 
+raw_datas = [list(set(data.split(' '))) for data in raw_datas]
+
 nb_class = max(labels) + 1
 batch_size = 4
 
@@ -58,7 +60,7 @@ w2id_path = '../data/word2id.pkl'
 # max_steps = max([len(_) for _ in train_x])   #　文书最多个数
 
 
-max_length = max([len(usr.split(' ')) for usr in train_x])
+max_length = max([len(usr) for usr in train_x])
 # max_steps = max([len(_) for _ in train_x])   #　文书最多个数
 
 
@@ -74,18 +76,21 @@ else:
     word_indices = pickle.load(open(w2id_path, 'rb'))
 
 
-def vector_sentence(sentence, wordIndices):
-    sent_list = sentence.strip().split(' ')
+def vecotr_list(sent_list, wordIndices):
     res = [word_indices[v] for v in sent_list if v in wordIndices]
     return res
+
+def vector_sentence(sentence, wordIndices):
+    sent_list = sentence.strip().split(' ')
+    return vecotr_list(sent_list, wordIndices)
 
 # train_x = [[vector_sentence(doc, word_indices) for doc in usr] for usr in train_x]
 # test_x = [[vector_sentence(doc, word_indices) for doc in usr] for usr in test_x]
 # train_x = [sequence.pad_sequences(_, max_length) for _ in train_x]
 # test_x = [sequence.pad_sequences(_, max_length) for _ in test_x]
 
-train_x = [vector_sentence(doc, word_indices) for doc in train_x]
-test_x = [vector_sentence(doc, word_indices) for doc in test_x]
+train_x = [vecotr_list(doc, word_indices) for doc in train_x]
+test_x = [vecotr_list(doc, word_indices) for doc in test_x]
 train_x = sequence.pad_sequences(train_x, max_length)
 test_x = sequence.pad_sequences(test_x, max_length)
 
@@ -108,5 +113,5 @@ model.compile(loss='categorical_crossentropy',
               optimizer='adam',
               metrics=['accuracy'])
 
-model.fit(train_x, train_y, batch_size=batch_size, epochs=40)
+model.fit(train_x, train_y, batch_size=batch_size, epochs=100)
 model.save('in_hospital.h5')
