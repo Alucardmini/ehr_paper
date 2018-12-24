@@ -29,11 +29,31 @@
       <file leaf-file-name="deep_learn_process.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/deep_learn_process.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="101" column="53" lean-forward="false" selection-start-line="101" selection-start-column="45" selection-end-line="101" selection-end-column="53" />
+            <state relative-caret-position="293">
+              <caret line="49" column="30" lean-forward="false" selection-start-line="49" selection-start-column="30" selection-end-line="49" selection-end-column="30" />
               <folding>
                 <element signature="e#149#158#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="embeddings.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/JH_App/opt/Python-3.6.2/lib/python3.6/site-packages/keras/layers/embeddings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="73" column="8" lean-forward="false" selection-start-line="73" selection-start-column="8" selection-end-line="73" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="core.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/JH_App/opt/Python-3.6.2/lib/python3.6/site-packages/keras/layers/core.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="98" column="8" lean-forward="false" selection-start-line="98" selection-start-column="8" selection-end-line="98" selection-end-column="8" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -116,8 +136,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="278" />
-    <option name="y" value="34" />
+    <option name="x" value="543" />
+    <option name="y" value="48" />
     <option name="width" value="1301" />
     <option name="height" value="744" />
   </component>
@@ -327,7 +347,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="278" y="34" width="1301" height="744" extended-state="0" />
+    <frame x="543" y="48" width="1301" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2366958" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -361,11 +381,6 @@
           <line>68</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/src/deep_learn_process.py</url>
-          <line>87</line>
-          <option name="timeStamp" value="28" />
-        </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
@@ -379,24 +394,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/JH_App/opt/Python-3.6.2/lib/python3.6/site-packages/tensorflow/core/protobuf/config_pb2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9126">
-          <caret line="507" column="61" lean-forward="false" selection-start-line="507" selection-start-column="61" selection-end-line="507" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/JH_App/opt/Python-3.6.2/lib/python3.6/site-packages/keras/backend/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="22" column="25" lean-forward="false" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/JH_App/opt/Python-3.6.2/lib/python3.6/site-packages/keras/utils/np_utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
@@ -789,10 +786,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/JH_App/opt/Python-3.6.2/lib/python3.6/site-packages/keras/layers/core.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="98" column="8" lean-forward="false" selection-start-line="98" selection-start-column="8" selection-end-line="98" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/JH_App/opt/Python-3.6.2/lib/python3.6/site-packages/keras/layers/embeddings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="73" column="8" lean-forward="false" selection-start-line="73" selection-start-column="8" selection-end-line="73" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/deep_learn_process.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="101" column="53" lean-forward="false" selection-start-line="101" selection-start-column="45" selection-end-line="101" selection-end-column="53" />
+        <state relative-caret-position="293">
+          <caret line="49" column="30" lean-forward="false" selection-start-line="49" selection-start-column="30" selection-end-line="49" selection-end-column="30" />
           <folding>
             <element signature="e#149#158#0" expanded="true" />
           </folding>
