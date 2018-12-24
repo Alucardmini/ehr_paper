@@ -18,7 +18,7 @@ sys.path.append(os.path.split(os.path.abspath(os.path.dirname(os.path.dirname(__
 
 import pickle
 from src.datasets import Datesets
-from keras.layers import Embedding, Dense, LSTM
+from keras.layers import Embedding, Dense, LSTM, Dropout
 from keras.preprocessing import sequence
 from keras.models import Model, Sequential
 import numpy as np
@@ -106,12 +106,14 @@ print(train_x[0].shape)
 
 model = Sequential()
 model.add(Embedding(len(word_indices), output_dim=64, name='embedding'))
-model.add(LSTM(512))
-model.add(Dense(512))
-model.add(Dense(nb_class, activation='softmax'))
+model.add(Dropout(0.441))
+model.add(Dense(100))
+model.add(LSTM(279))
+model.add(Dense(20))
+model.add(Dense(1, activation='linear'))
 
-model.compile(loss='categorical_crossentropy',
-              optimizer='adam',
+model.compile(loss='mean_squared_error',
+              optimizer='SGD',
               metrics=['accuracy'])
 
 model.fit(train_x, train_y, batch_size=batch_size, epochs=epochs, validation_data=(test_x, test_y))
